@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Social Links</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffffff;
+}
+
+/* Card container */
+.container{
+    position: relative; /* for absolute photo */
+    background:#ffffff;
+    padding:30px 30px 30px 30px;
+    border-radius:20px;
+    width:350px;
+    min-height:400px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.1);
+    text-align:center;
+    overflow:visible; /* photo can be outside */
+}
+
+/* Heading */
+h1{
+    margin-bottom:20px;
+    color:#111;
+}
+
+/* Profile photo top-right */
+.profile-pic{
+    position: absolute;
+    top:-50px;        /* card ke upar bahar */
+    right:-50px;      /* right corner ke bahar */
+    width:100px;      /* adjust size as you want */
+    height:100px;
+    border-radius:50%; 
+    overflow:hidden;
+    border:3px solid #ffcc00;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    background:#fff;
+    z-index:10;
+}
+
+.profile-pic img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Links */
+.links{
+    margin-top:20px;
+}
+
+.links a{
+    display:block;
+    width:100%;
+    text-decoration:none;
+    margin:10px 0;
+    padding:12px 0;
+    border-radius:12px;
+    font-weight:500;
+    text-align:center;
+    color:white;
+    transition:0.3s;
+}
+
+/* Link colors */
+.links a:nth-child(1){ background:#333; }           /* GitHub */
+.links a:nth-child(2){ background:#1DA1F2; }        /* Twitter */
+.links a:nth-child(3){ background:#0077B5; }        /* LinkedIn */
+.links a:nth-child(4){ background:#f59e0b; }        /* Commudle */
+.links a:nth-child(5){ background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045); } /* Instagram */
+
+/* Hover */
+.links a:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Profile photo top-right corner -->
+        <div class="profile-pic">
+            <img src="profile.jpg" alt="Kesar Photo">
+        </div>
+
+        <h1>My Social Links</h1>
+
+        <div class="links">
+            <a href="https://github.com/kesar-sooryavanshi" target="_blank">GitHub</a>
+            <a href="https://x.com/kesar319889" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/kesar-sooryavanshi-480b39362" target="_blank">LinkedIn</a>
+            <a href="https://www.commudle.com/users/9915487ff989ff52d72c0128b73c5b5c" target="_blank">Commudle</a>
+            <a href="https://www.instagram.com/sooryavanshii_kesar" target="_blank">Instagram</a>
+        </div>
+
+    </div>
+</body>
+</html>
