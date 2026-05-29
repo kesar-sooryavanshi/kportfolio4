@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kesar's Portfolio Horizontal Boxes</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f0f0f0;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+/* Main container */
+.container{
+    width:420px;
+    background:#ffffff;
+    border-radius:20px;
+    padding:60px 20px 20px 20px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.2);
+    position: relative;
+    overflow:visible;
+}
+
+/* Profile Photo top-right */
+.profile-pic{
+    position:absolute;
+    top:-50px;
+    right:-50px;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid #a83232;
+    box-shadow:0 0 15px rgba(255,204,0,0.8);
+    z-index:10;
+    transition:0.3s;
+}
+
+.profile-pic img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.profile-pic:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px rgba(255,204,0,1);
+}
+
+/* Text next to photo */
+.photo-text{
+    position:absolute;
+    top:40px;
+    right:150px;
+    font-weight:600;
+    font-size:16px;
+    color:#111;
+}
+
+/* Boxes */
+.box{
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+    color:#fff;
+    transition:0.3s;
+    display:flex;
+    align-items:center;
+    gap:15px; /* horizontal spacing */
+}
+
+.box:hover{
+    transform:scale(1.02);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Individual box colors */
+.welcome-box{ background:#a83232; font-size:20px; font-weight:700; justify-content:center; text-align:center;}
+.about-box{ background:#1DA1F2; color:#fff; flex-direction:column; }
+.skills-box{ background:#111111; flex-wrap:wrap; }
+.skill{ background:#ffcc00; color:#111; padding:10px 12px; border-radius:10px; font-weight:500; white-space:nowrap; }
+
+/* Programming Languages */
+.prog-box{ background:#833ab4; padding:15px; border-radius:15px; flex-direction:column; }
+.prog-box ul{ display:flex; gap:15px; list-style:none; padding-left:0; }
+.prog-box ul li{ margin:0; padding-left:0; font-weight:500; color:#fff; }
+
+/* Social Links */
+.links-box{ background:#f59e0b; padding:15px; border-radius:15px; flex-direction:column; gap:10px; }
+.links-box a{ text-decoration:none; color:#fff; font-weight:500; padding:10px 0; border-radius:12px; text-align:center; background:#333; transition:0.3s; display:block; }
+.links-box a:nth-child(2){ background:#1DA1F2; }
+.links-box a:nth-child(3){ background:#0077B5; }
+.links-box a:nth-child(4){ background:#f59e0b; }
+.links-box a:nth-child(5){ background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045); }
+.links-box a:hover{ transform:scale(1.05); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+
+/* Responsive */
+@media(max-width:450px){
+    .container{
+        width:90%;
+        padding:60px 15px 20px 15px;
+    }
+    .profile-pic{
+        width:100px;
+        height:100px;
+        top:-40px;
+        right:-40px;
+    }
+    .photo-text{
+        right:120px;
+        font-size:14px;
+    }
+    .box{ flex-direction:column; align-items:flex-start; }
+    .prog-box ul{ flex-direction:column; gap:5px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Profile Photo -->
+    <div class="profile-pic">
+        <img src="profile.jpg" alt="Kesar Photo">
+    </div>
+    <div class="photo-text">Hello! I'm Kesar Sooryavanshi</div>
+
+    <!-- Welcome -->
+    <div class="box welcome-box">👋 Welcome to My Space</div>
+
+    <!-- About Me -->
+    <div class="box about-box">
+        <h2>About Me</h2>
+        <p>Hi! I’m Kesar Sooryavanshi, a BTech student passionate about technology, coding, and creating projects that make a difference. I love learning new skills and sharing my ideas with others. This is my space to showcase my work and connect with like-minded people—feel free to explore and reach out on my socials!</p>
+    </div>
+
+    <!-- Skills -->
+    <div class="box skills-box">
+        <div class="skill">Problem Solving</div>
+        <div class="skill">Supervision & Leadership</div>
+        <div class="skill">Time Management</div>
+        <div class="skill">Project Management</div>
+        <div class="skill">Communication</div>
+        <div class="skill">Cooking</div>
+        <div class="skill">Teamwork</div>
+        <div class="skill">Analytical Thinking</div>
+    </div>
+
+    <!-- Programming Languages -->
+    <div class="box prog-box">
+        <h3>Programming Languages</h3>
+        <ul>
+            <li>Basic Python</li>
+            <li>Basic C++</li>
+            <li>HTML</li>
+            <li>Good in Prompting</li>
+        </ul>
+    </div>
+
+    <!-- Social Links -->
+    <div class="box links-box">
+        <a href="https://github.com/kesar-sooryavanshi" target="_blank">GitHub</a>
+        <a href="https://x.com/kesar319889" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com/in/kesar-sooryavanshi-480b39362" target="_blank">LinkedIn</a>
+        <a href="https://www.commudle.com/users/9915487ff989ff52d72c0128b73c5b5c" target="_blank">Commudle</a>
+        <a href="https://www.instagram.com/sooryavanshii_kesar" target="_blank">Instagram</a>
+    </div>
+
+</div>
+
+</body>
+</html>
